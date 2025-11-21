@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import CitySection from './components/CitySection'
 import Footer from './components/Footer'
+import ParallaxBackground from './components/ParallaxBackground'
 
 function App() {
   const cities = [
@@ -69,10 +70,8 @@ function App() {
 
   return (
     <div className="relative bg-white text-slate-900">
-      {/* Depth field for a subtle 3D feel across the page */}
-      <div className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_10%_-10%,rgba(244,63,94,0.08),transparent),radial-gradient(800px_400px_at_110%_10%,rgba(14,165,233,0.07),transparent)]" />
-      </div>
+      {/* New 3D parallax background */}
+      <ParallaxBackground />
 
       <Navbar />
       <Hero />
