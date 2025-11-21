@@ -69,18 +69,19 @@ function App() {
   ]
 
   return (
-    <div className="relative bg-white text-slate-900">
-      {/* New 3D parallax background */}
+    <div className="relative text-slate-900">
+      {/* 3D parallax background */}
       <ParallaxBackground />
 
-      <Navbar />
-      <Hero />
-
-      {cities.map((c) => (
-        <CitySection key={c.id} {...c} />
-      ))}
-
-      <Footer />
+      {/* Content above background */}
+      <div className="relative z-10">
+        <Navbar />
+        <Hero />
+        {cities.map((c) => (
+          <CitySection key={c.id} {...c} />
+        ))}
+        <Footer />
+      </div>
     </div>
   )
 }
